@@ -99,12 +99,12 @@ public class RandomDrawingGenerator extends JFrame {
                     g2d.drawPolygon(xPoints, yPoints, 3);
                     break;
                 case 4:
-                    // Рисование параболы (пример)
+                    // Рисование параболы 
                     QuadCurve2D curve = new QuadCurve2D.Float(x, y, x + size / 2, y + size, x + size, y);
                     g2d.draw(curve);
                     break;
                 case 5:
-                    // Рисование трапеции (пример)
+                    // Рисование трапеции 
                     int topWidth = size + random.nextInt(20);
                     int bottomWidth = size + random.nextInt(20);
                     int trapezeHeight = size + random.nextInt(20);
@@ -119,7 +119,7 @@ public class RandomDrawingGenerator extends JFrame {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new RandomDrawingGenerator(10, 800, 600, true); //10 - количество базовых фигур,800 - ширина окна, 600 - высота окна, true - указывает, нужно ли рисовать координатную сетку.
+            new RandomDrawingGenerator(10, 800, 600, true); //10 - количество базовых фигур, 800 - ширина окна, 600 - высота окна, true - указывает, нужно ли рисовать координатную сетку.
         });
     }
 }
